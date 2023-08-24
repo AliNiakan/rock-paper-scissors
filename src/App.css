@@ -1,0 +1,197 @@
+body {
+    background: radial-gradient(#1f3756, #141539);
+    height: 100vh;
+    background-size: auto;
+    color: white;
+    margin: 0;
+
+}
+
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.triangle {
+    width: 200px;
+    position: absolute;
+    align-self: center;
+    margin-top: 180px;
+}
+
+@media screen and (min-width:768px) {
+    .triangle {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .triangle {
+        width: 600px;
+    }
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scissors {
+
+    transform: translate(68px, -10px);
+}
+
+.rock {
+
+    transform: translateY(15px);
+}
+
+.paper {
+    transform: translate(-68px, -210px);
+
+}
+
+@media screen and (min-width:768px) {
+    .options {
+        margin-top: 40px;
+    }
+
+    .scissors {
+        transform: translate(130px, -44px);
+
+    }
+
+    .rock {
+        transform: translate(1px, 80px);
+
+    }
+
+    .paper {
+        transform: translate(-122px, -242px);
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .options {
+        margin-top: 40px;
+    }
+
+    .scissors {
+        transform: translate(254px, -55px);
+
+    }
+
+    .rock {
+        transform: translate(1px, 318px);
+
+    }
+
+    .paper {
+        transform: translate(-266px, -254px);
+    }
+}
+
+
+
+.rules {
+    width: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 7px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .rules {
+        width: 200px;
+        margin-left: auto;
+        margin-right: 20px;
+        position: fixed;
+        bottom: 20px; 
+        right: 0;
+    }
+}
+
+
+.choices-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.choices-container h1 {
+    text-align: center;
+}
+
+.choice {
+    padding: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .choice {
+        transform: scale(1.5);
+        margin: 0 30px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .choice {
+        transform: scale(3);
+        margin: 50px 150px;
+    }
+}
+
+.result-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.result-button button {
+    width: 200px;
+    font-weight: 500;
+    background-color: #fff;
+    border: 2px solid white;
+    color: #3B3B3B;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/*Css Transitions*/
+.fade-enter {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transform: scale(0.8);
+}
